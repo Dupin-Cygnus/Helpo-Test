@@ -1,10 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Discord.WebSocket;
 
 namespace Helpo_Bot_Core.Discord.Entities
 {
-    class HelpoBotConfig
+    public class HelpoBotConfig
     {
+        public string Token { get; set; }
+        public DiscordSocketConfig SocketConfig { get; set; }
+
+
     }
+
+    
+
 }
