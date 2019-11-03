@@ -4,7 +4,10 @@ using System.Text;
 
 namespace Helpo_Bot_Core.Storage
 {
-    interface IDataStorage
+    public interface IDataStorage
     {
+        void StoreObject(object obj, string key);
+
+        T RestoreObject<T>(string key);
     }
 }

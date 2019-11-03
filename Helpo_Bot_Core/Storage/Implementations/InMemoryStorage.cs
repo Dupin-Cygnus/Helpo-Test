@@ -6,7 +6,7 @@ namespace Helpo_Bot_Core.Storage.Implementations
 {
     public class InMemoryStorage : IDataStorage
     {
-        private Dictionary<string, object> _dictionary = new Dictionary<string, object>;
+        private Dictionary<string, object> _dictionary = new Dictionary<string, object>();
 
         public T RestoreObject<T>(string key)
         {
