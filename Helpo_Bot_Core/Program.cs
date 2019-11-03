@@ -6,7 +6,7 @@ namespace Helpo_Bot_Core
     {
         private static void Main()
         {
-            Console.WriteLine("Henlo World!");
+            Console.WriteLine("Henlo.");
         }
     }
 }
