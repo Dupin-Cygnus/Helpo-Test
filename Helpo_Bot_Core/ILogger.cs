@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Helpo_Bot_Core
 {
-    interface ILogger
+    public interface ILogger
     {
+        void Log(string message);
     }
 }
