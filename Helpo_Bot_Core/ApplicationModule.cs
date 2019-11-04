@@ -10,7 +10,8 @@ namespace Helpo_Bot_Core
         public override void Load()
         {
             Bind<IDataStorage>().To<InMemoryStorage>().InSingletonScope();
-
+            Bind<ILogger>().To<Logger>().InSingletonScope();
+            Bind<Discord.Connection>().ToSelf().InSingletonScope();
             /*
             Format: Bind<Interface>().To<Class>().InSingletonScope();
             Format: Bind<Class>().ToSelf().InSingletonScope();

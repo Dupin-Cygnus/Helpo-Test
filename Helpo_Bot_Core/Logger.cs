@@ -12,7 +12,7 @@ namespace Helpo_Bot_Core
             Console.WriteLine(message);
         }
 
-        /* If we want to add a console text color version
+        /* If we want to add a console text color version, defaults to White text
         public void Log(string message, ConsoleColor color = ConsoleColor.White)
         {
             Console.ForegroundColor = color;

@@ -15,7 +15,7 @@ namespace Helpo_Bot_Core
             //use kernel for creating class-objects that need dependency injection
             IKernel injections = new StandardKernel(new ApplicationModule());
 
-            var a = injections.Get<IDataStorage>();
+            var a = injections.Get<Connection>();
 
             Console.WriteLine("Henlo.");
 
