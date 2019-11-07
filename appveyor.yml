@@ -1,0 +1,12 @@
+version: 1.0.{build}
+image: Visual Studio 2017 Community
+skip_tags: true
+dotnet_csproj:
+  patch: true
+  file: '**/*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+build_script:
+  - dotnet build -c Release
+test_script:
+  - dotnet test Helpo_Bot_Core.xUnit.Tests/Helpo_Bot_Core.xUnit.Tests.csproj
