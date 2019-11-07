@@ -10,6 +10,9 @@
 *.userosscache
 *.sln.docstates
 
+# Ignore Visual Studio Code implementation
+.vscode/
+
 # Launch Settings
 launchSettings.json
 
