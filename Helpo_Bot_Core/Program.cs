@@ -13,21 +13,10 @@ namespace Helpo_Bot_Core
         private static async Task Main()
         {
             //use kernel for creating class-objects that need dependency injection
-            IKernel injections = new StandardKernel(new ApplicationModule());
+            IKernel injections = new StandardKernel(new InjectionModule());
             Console.WriteLine("Henlo.");
 
             var storage = injections.Get<IDataStorage>();
-
-            var token = "ABC";
-            storage.StoreObject(token, "Config/BotToken");
-
-            System.Console.WriteLine("Done!");
-            Console.ReadKey();
-
-
-            Console.WriteLine(storage.RestoreObject<string>("Config/BotToken"));
-
-            Console.ReadKey();
 
             var discordBotConfig = new HelpoBotConfig
             {
@@ -35,7 +24,11 @@ namespace Helpo_Bot_Core
             };
 
             var connection = injections.Get<Connection>();
-            await connection.ConnectAsync(discordBotConfig);
+            await connection.ConnectAsync(new HelpoBotConfig
+            {
+                Token = storage.RestoreObject<string>("Config/BotToken")
+            });
+            Console.ReadKey();
 
         }
     }

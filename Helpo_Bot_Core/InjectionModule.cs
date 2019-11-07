@@ -9,7 +9,7 @@ using Helpo_Bot_Core.Discord;
 // Used for dependency injection
 namespace Helpo_Bot_Core
 {
-    public class ApplicationModule : NinjectModule
+    public class InjectionModule : NinjectModule
     {
         public override void Load()
         {
