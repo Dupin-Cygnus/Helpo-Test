@@ -5,8 +5,6 @@ namespace Helpo_Bot_Core.Discord.Entities
     public class HelpoBotConfig
     {
         public string Token { get; set; }
-        public DiscordSocketConfig SocketConfig { get; set; }
-
 
     }
 
